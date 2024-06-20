@@ -8,6 +8,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import axios from "axios";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import ErrorPage from "./pages/ErrorPage.jsx";
 import { UserProvider } from "./context/UserContext.jsx";
 
 axios.defaults.baseURL = "http://localhost:3000/api";
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "board/:boardId",
