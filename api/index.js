@@ -13,7 +13,7 @@ dotenv.config();
 connectDB();
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 app.use(express.json());
 app.use(cors());
@@ -22,10 +22,6 @@ app.use("/api/boards", boardRoutes);
 app.use("/api/cards", cardRoutes);
 app.use("/api/tasks", taskRoutes);
 app.use(errorHandler);
-
-app.get("/test", (req, res) => {
-  res.send("Server is up.");
-});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
