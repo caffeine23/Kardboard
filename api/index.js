@@ -21,6 +21,13 @@ app.use("/api/auth", authRoutes);
 app.use("/api/boards", boardRoutes);
 app.use("/api/cards", cardRoutes);
 app.use("/api/tasks", taskRoutes);
+
+app.use((req, res, next) => {
+  const error = new Error("Not Found");
+  error.statusCode = 404;
+  next(error);
+});
+
 app.use(errorHandler);
 
 app.listen(PORT, () => {
