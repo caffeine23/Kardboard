@@ -15,6 +15,7 @@ import {
   Stack,
   useColorMode,
   Icon,
+  Heading,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { CiViewBoard } from "react-icons/ci";
@@ -61,7 +62,7 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={"center"}>
             <Box>
-              <Icon as={CiViewBoard} boxSize={8} />
+              <Heading size="lg">ᴋᴀʀᴅʙᴏᴀʀᴅ</Heading>
             </Box>
             <HStack
               as={"nav"}
