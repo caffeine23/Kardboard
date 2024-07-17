@@ -1,4 +1,4 @@
-# KanbanBoard
+# Kardboard
 Kanban Board made using MongoDB, ExpressJs, ReactJs & NodeJs
 
 ### To run
